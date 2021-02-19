@@ -24,15 +24,28 @@
         ></TextView>
 
     <View
-        android:layout_weight="0.85"
+        android:layout_weight="0.55"
         android:layout_width="0dp"
         android:layout_height="0dp"
         ></View>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/InputIDLayout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        ></com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:inputType="textEmailAddress"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/InputIDEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:drawablePadding="12dp"
+            android:hint="EmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <View
         android:layout_weight="0.03"
@@ -40,6 +53,54 @@
         android:layout_height="0dp"
         ></View>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/InputPWLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        app:errorEnabled="true"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/InputPWEdit"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:hint="Password"
+            android:drawablePadding="12dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_weight="0.3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        ></View>
+
+    <View
+        android:layout_weight="0.03"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        ></View>
+
+    <Button
+        android:onClick="onLogin"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:background="@drawable/round_btn"
+        android:layout_gravity="center"
+        ></Button>
+
+    <View
+        android:layout_weight="0.03"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        ></View>
 
     <Button
         android:onClick="onBackclick"
