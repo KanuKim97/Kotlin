@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="InputIDLayout" type="id" />
+    <item name="InputIDEdit" type="id" />
+    <item name="InputPWLayout" type="id" />
+    <item name="InputPWEdit" type="id" />
+</resources>

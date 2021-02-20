@@ -31,4 +31,10 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, SecondActivity::class.java)
         startActivity(intent)
     }
+
+    fun onCreate(view: View) {
+        Log.d(TAG, "MainActivity - onCreateBtnClicked");
+        val intent = Intent(this, Account::class.java)
+        startActivity(intent)
+    }
 }

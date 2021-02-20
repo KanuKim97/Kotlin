@@ -1,23 +1,23 @@
 package com.example.sample_layout
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
-import android.widget.TextView
-import com.google.android.material.textfield.TextInputEditText
+import kotlinx.android.synthetic.main.activity_account.*
 import kotlinx.android.synthetic.main.activity_second.*
-import android.util.Log.d as d1
+import kotlinx.android.synthetic.main.activity_second.InputIDEdit
+import kotlinx.android.synthetic.main.activity_second.InputIDLayout
+import kotlinx.android.synthetic.main.activity_second.InputPWEdit
+import kotlinx.android.synthetic.main.activity_second.InputPWLayout
 
-class SecondActivity : AppCompatActivity() {
-
-    lateinit var myID : TextInputEditText
-
+class Account : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
+        setContentView(R.layout.activity_account)
         textWatcher()
     }
 
@@ -35,6 +35,19 @@ class SecondActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
 
+        InputNickEdit.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                if(InputNickEdit.text!!.isEmpty()){
+                    InputNickLayout.error = "Input your Nickname Plz"
+                } else {
+                    InputNickLayout.error = null
+                }
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+        })
+
         InputPWEdit.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 if(InputPWEdit.text!!.isEmpty()){
@@ -47,15 +60,12 @@ class SecondActivity : AppCompatActivity() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
         })
     }
-    
-    fun onBackclick(view: View){
-        finish()
-    }
 
-    fun onLogin(view: View){
+    fun onCreate(view: View) {
         var id = InputIDEdit.text.toString()
+        var Nick = InputNickEdit.text.toString()
         var pw = InputPWEdit.text.toString()
-        Log.d("Login_test", "Value :  Id : $id Password : $pw")
+        Log.d("Creation", "\n ID: $id \n NickName: $Nick \n Pw: $pw")
         finish()
     }
 }

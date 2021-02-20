@@ -1,33 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity"
+    tools:context=".Account"
     android:orientation="vertical"
     android:background="@drawable/bg"
-    android:paddingHorizontal="20dp"
     android:weightSum="1"
+    android:paddingHorizontal="20dp"
     >
 
+    <View
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:layout_width="0dp">
+    </View>
+
     <TextView
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textStyle="bold"
-        android:textAlignment="center"
+        android:text="Register your Account!"
         android:textColor="#fff"
-        android:textSize="30dp"
-        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="65dp"
+        android:textAlignment="center"
         ></TextView>
 
     <View
-        android:layout_weight="0.35"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        ></View>
+        android:layout_weight="0.05">
+    </View>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/InputIDLayout"
@@ -36,76 +43,74 @@
         app:errorEnabled="true"
         android:inputType="textEmailAddress"
         >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/InputIDEdit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_baseline_email_24"
-            android:drawablePadding="12dp"
-            android:hint="EmailAddress" />
-
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/InputIDEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="12dp"
+        android:hint="EmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <View
-        android:layout_weight="0.03"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        ></View>
+        android:layout_weight="0.03">
+    </View>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/InputNickLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:inputType="text"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/InputNickEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawablePadding="12dp"
+            android:hint="NickName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.03">
+    </View>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/InputPWLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
         app:errorEnabled="true"
+        android:inputType="textPassword"
         >
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/InputPWEdit"
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:inputType="textPassword"
+            android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_baseline_lock_24"
-            android:hint="Password"
             android:drawablePadding="12dp"
-            />
+            android:hint="Password" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <View
-        android:layout_weight="0.35"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        ></View>
+        android:layout_weight="0.2">
+    </View>
 
     <Button
-        android:onClick="onLogin"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:textSize="20dp"
-        android:textColor="#fff"
-        android:text="Login"
+        android:layout_height="50dp"
+        android:text="Register"
         android:textAllCaps="false"
-        android:background="@drawable/round_btn"
-        android:layout_gravity="center"
-        ></Button>
-
-    <View
-        android:layout_weight="0.03"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        ></View>
-
-    <Button
-        android:onClick="onBackclick"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:textSize="20dp"
         android:textColor="#fff"
-        android:text="GoBack"
-        android:textAllCaps="false"
-        android:background="@drawable/round_btn3"
-        android:layout_gravity="center"
-        ></Button>
+        android:textSize="20dp"
+        android:background="@drawable/round_btn2"
+        android:onClick="onCreate"
+        />
+
 </LinearLayout>
