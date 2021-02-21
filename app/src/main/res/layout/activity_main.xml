@@ -47,6 +47,7 @@
             android:layout_height="0dp"
             ></View>
         <Button
+            android:onClick="onCreateGoogle"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Continue with Google"

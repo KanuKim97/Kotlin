@@ -1,6 +1,7 @@
 package com.example.sample_layout
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -66,6 +67,9 @@ class Account : AppCompatActivity() {
         var Nick = InputNickEdit.text.toString()
         var pw = InputPWEdit.text.toString()
         Log.d("Creation", "\n ID: $id \n NickName: $Nick \n Pw: $pw")
-        finish()
+
+        Log.d("Creation", "AccountActivity - onCreateBtnClicked")
+        val intent = Intent(this, SecondActivity::class.java)
+        startActivity(intent)
     }
 }

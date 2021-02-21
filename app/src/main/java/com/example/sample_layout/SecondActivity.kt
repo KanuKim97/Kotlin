@@ -1,5 +1,7 @@
 package com.example.sample_layout
 
+import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -7,14 +9,14 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.activity_second.*
 import android.util.Log.d as d1
 
 class SecondActivity : AppCompatActivity() {
-
-    lateinit var myID : TextInputEditText
-
+    val TAG:String = "로그"
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
@@ -55,7 +57,10 @@ class SecondActivity : AppCompatActivity() {
     fun onLogin(view: View){
         var id = InputIDEdit.text.toString()
         var pw = InputPWEdit.text.toString()
-        Log.d("Login_test", "Value :  Id : $id Password : $pw")
-        finish()
+        Log.d(TAG, "Value :  Id : $id Password : $pw")
+
+        Log.d(TAG, "SecondActivity - onLoginBtnClicked")
+        val intent = Intent(this, PageMain::class.java)
+        startActivity(intent)
     }
 }

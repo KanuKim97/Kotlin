@@ -32,6 +32,12 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun onCreateGoogle(view: View){
+        Log.d(TAG, "MainActivity - onCreateGoogleBtnClicked");
+        val intent = Intent(this, googleLogin::class.java)
+        startActivity(intent)
+    }
+
     fun onCreate(view: View) {
         Log.d(TAG, "MainActivity - onCreateBtnClicked");
         val intent = Intent(this, Account::class.java)
