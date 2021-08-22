@@ -70,11 +70,8 @@ class PageMain : AppCompatActivity() {
     fun getMyLocation(): LatLng{
         val locationProvider: String = LocationManager.GPS_PROVIDER
         val locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
-        val lastKnownLocation: Location? = locationManager.getLastKnownLocation(locationProvider)
-
-
+        val lastKnownLocation: Location = locationManager.getLastKnownLocation(locationProvider)!!
         return LatLng(lastKnownLocation.latitude, lastKnownLocation.longitude)
-
     }
 
 
