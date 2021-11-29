@@ -5,10 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.lifecycle.ViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 //메인화면
-class MainActivity : AppCompatActivity() {
+class MainActivity : ViewModel() {
 
     val TAG: String = "로그"
     //뷰가 생성되었을 때
