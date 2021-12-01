@@ -28,5 +28,4 @@ https://developer.android.com/jetpack?hl=ko
 
 MVVM Pattern 
 https://beomy.tistory.com/43
-
 ```
