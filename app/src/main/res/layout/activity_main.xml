@@ -5,12 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
     android:background="@drawable/bg"
     android:weightSum="1"
     android:paddingHorizontal="20dp"
-    >
+    tools:context=".MainActivity" >
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,41 +20,38 @@
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="65dp"
-        android:textAlignment="center"
-        ></TextView>
+        android:textAlignment="center" />
 
     <View
         android:layout_weight="0.85"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        ></View>
+        android:layout_height="0dp" />
 
 
         <Button
-            android:onClick="onCreate"
+            android:id="@+id/signUpBtn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Create Your Account"
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textSize="20dp"
-            android:background="@drawable/round_btn"
-            ></Button>
+            android:background="@drawable/round_btn" />
+
         <View
             android:layout_weight="0.03"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            ></View>
+            android:layout_height="0dp" />
+
         <Button
-            android:onClick="onCreateGoogle"
+            android:id="@+id/googleBtn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Continue with Google"
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textSize="20dp"
-            android:background="@drawable/round_btn2"
-            ></Button>
+            android:background="@drawable/round_btn2" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -64,11 +60,10 @@
             android:textColor="#fff"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            ></TextView>
+            android:layout_marginTop="10dp" />
 
         <Button
-            android:id="@+id/Login_Btn"
+            android:id="@+id/loginBtn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="LogIn"
@@ -76,7 +71,6 @@
             android:textColor="#fff"
             android:textSize="20dp"
             android:background="@drawable/round_btn3"
-            android:layout_marginTop="10dp"
-            ></Button>
+            android:layout_marginTop="10dp" />
 
 </LinearLayout>
