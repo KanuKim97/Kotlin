@@ -1,5 +1,6 @@
 # Repository Discription
   Kotlin 공부를 위한 Repository 입니다.
+ 
   이 Repository는 Android Jetpack 라이브러리를 사용합니다.
   
 ## Design Pattern
